@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site1.Master.cs" Inherits="PSDProject.Site1" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1>Raamen</h1>
+    <form id="form1" runat="server">
+        <nav style="color:red">
+            <asp:HyperLink ID="homeBtn" runat="server" NavigateUrl="~/Views/Home.aspx">Home</asp:HyperLink>
+            <div>
+                <asp:HyperLink ID="orderRamenBtn" runat="server" Visible ="false" NavigateUrl="~/Views/OrderRamen.aspx">Order Ramen</asp:HyperLink>
+                <asp:HyperLink ID="manageRamenBtn" runat="server" Visible ="false" NavigateUrl="~/Views/ManageRamen.aspx">Manage Ramen</asp:HyperLink>
+                <asp:HyperLink ID="orderQueueBtn" runat="server" Visible ="false" NavigateUrl="~/Views/TransactionQueue.aspx">Order Queue</asp:HyperLink>
+
+                <asp:HyperLink ID="historyBtn" runat="server" Visible ="false" NavigateUrl="~/Views/History.aspx">History</asp:HyperLink>
+                <asp:HyperLink ID="profileBtn" runat="server" Visible ="false" NavigateUrl="~/Views/Profile.aspx">Profile</asp:HyperLink>
+                <asp:HyperLink ID="reportBtn" runat="server" Visible ="false" NavigateUrl="~/Views/Report.aspx">Report</asp:HyperLink>
+            </div>
+            <div>
+                <asp:Button ID="loginBtn" Text="Log In" runat="server" OnClick="loginBtn_Click" Visible ="true"/>
+                <asp:Button ID="registerBtn" Text="Register" runat="server" OnClick="registerBtn_Click" Visible ="true"/>
+                <asp:Button ID="logoutBtn" Text="Log Out" runat="server" OnClick="logoutBtn_Click1" Visible ="false"/>
+                    
+            </div>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
